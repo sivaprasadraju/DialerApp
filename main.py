@@ -1,4 +1,5 @@
 from add import AddContact
+from search import Search
 
 class Main:
 	ContactNames = ['Keanu Reeves', 'Brad Pitt', 'Trisha', 'Vijay Sethupathy']
@@ -18,3 +19,15 @@ class Main:
         name = raw_input('Enter name of the new contact : ')
         number = input('Enter number of the new Number : ')
         AddContact(name, number, Data)
+		NewPreference = input('Enter your New preference : ')
+        if(NewPreference == 1):
+            name1 = raw_input('Enter name of the new contact : ')
+            number1 = input('Enter number of the new Number : ')
+            AddContact(name1, number1, Data)
+        elif(NewPreference == 2):
+            Input = input('Enter number : ')
+            Search(Input, Data, AlphabetDict)
+
+    elif(preference == 2):
+        Input = input('Enter number : ')
+        Search(Input, Data, AlphabetDict)
